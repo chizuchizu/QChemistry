@@ -152,6 +152,7 @@ K = E - W = h(\nu - \nu_0)
 $$
 - $K$: 光電子の運動エネルギー
 - $E$: 光のエネルギー($h\nu$でしたね)
+- $h$: プランク定数($6.6 \times 10^{-34} Js$)
 - $\nu_0$: 限界振動数
   - 初めてポーンするときの振動数(前ページを参照)
 
@@ -174,4 +175,71 @@ $$
 
 
 </div></div>
+
+---
+
+# 粒子も波でワ❓
+
+<div class="grid grid-cols-[50%,50%] gap-4"><div>
+
+## Bragg反射
+
+X線をいろいろな方向から当てると角度$\theta$によって反射したり反射しなかったり.
+
+
+Braggの条件
+$$
+2d sin\theta = n\lambda
+$$
+$d$: 原子面間隔, $\lambda$: 波長, nは任意の自然数
+<br>
+
+
+- 反射する
+- 光が干渉している
+- 位相が同じ光がたくさん
+- 光路差($2dsin\theta$)が波長に比例
+
+
+<style>
+  .img2{
+    background-image:url(./img/bragg.png);
+    background-repeat:no-repeat;
+    background-size:200pt 200px;
+    width:250pt;
+    height:250px
+  }
+</style>
+
+</div><div>
+
+## 電子でも成立
+
+Davisson-Germerの実験ともよばれている.
+
+de Broglie方程式
+$$
+\lambda = \frac{h}{p}=\frac{h}{m\nu}
+$$
+<br>
+
+<div class="img2"></div>
+</div></div>
+
+---
+
+# de Broglie波
+粒子の波動性
+
+$$
+p = \frac{h}{\lambda}
+$$
+photonの運動量$p$はコンプトン効果からわかる. $h$はプランク定数, $\lambda$は波長
+
+
+de Broglie方程式
+$$
+\lambda = \frac{h}{p}=\frac{h}{m\nu}
+$$
+
 
