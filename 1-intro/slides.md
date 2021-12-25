@@ -182,23 +182,23 @@ $$
 
 <div class="grid grid-cols-[50%,50%] gap-4"><div>
 
-## Bragg反射
+## ブラッグ反射
 
-結晶にX線をいろいろな方向から当てると角度$\theta$によって反射したり反射しなかったり.
+X線をいろいろな方向から当てると角度$\theta$によって反射したり反射しなかったり.
 
 
-Braggの条件
+ブラッグの条件
 $$
 2d sin\theta = n\lambda
 $$
 $d$: 原子面間隔, $\lambda$: 波長, nは任意の自然数
 <br>
 
+位相が同じだと強めあう(干渉)
 
 - 反射する
-- 光が干渉している
+- 光が干渉している 
 - 位相が同じ光がたくさん
-- 光路差($2dsin\theta$)が波長に比例
 
 
 <style>
@@ -217,10 +217,6 @@ $d$: 原子面間隔, $\lambda$: 波長, nは任意の自然数
 
 Davisson-Germerの実験ともよばれている.
 
-de Broglie方程式
-$$
-\lambda = \frac{h}{p}=\frac{h}{m\nu}
-$$
 <br>
 
 <div class="img2"></div>
