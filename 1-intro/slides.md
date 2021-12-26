@@ -1,6 +1,6 @@
 ---
 # try also 'default' to start simple
-theme: seriph 
+theme: geist 
 # random image from a curated Unsplash collection by Anthony
 # like them? see https://unsplash.com/collections/94734566/slidev
 background: https://source.unsplash.com/collection/94734566/1920x1080
@@ -130,13 +130,13 @@ footer: "量子化学勉強会 1日目"
 ---
 
 # Einsteinの説明
-_
+
+<br>
 
 振動数$\nu$の光を**エネルギー$h\nu$を持つ粒子**(光子)とみなす.
  1つの光子が1つの電子と衝突する際にエネルギーを受け渡している.
 
 光の強さは光子の数だから、電子のポーンには影響しない!
-
 
 <div class="grid grid-cols-[50%,50%] gap-4"><div>
 
@@ -148,7 +148,7 @@ $$
 - $h$: プランク定数($6.6 \times 10^{-34} Js$)
 - $\nu_0$: 限界振動数
   - 初めてポーンするときの振動数(前ページを参照)
-
+<note>プランク定数はスケーリング的な意味合い</note>
 <br>
 
 ### 光は粒子でした　めでたしめでたし
@@ -168,6 +168,28 @@ $$
 
 
 </div></div>
+
+---
+
+# de Broglie波
+粒子の波動性
+
+$$
+p = \frac{h}{\lambda}
+$$
+photonの運動量$p$はコンプトン効果からわかる. $h$はプランク定数, $\lambda$は波長.波長に反比例カナ.
+
+
+**逆に, 運動量を持つ粒子も波動なのでワ**❓
+
+
+de Broglie方程式
+$$
+\lambda = \frac{h}{p}=\frac{h}{mv}
+$$
+<note>運動エネルギー$p$は$mv$と等価です(定義)</note>
+
+<note>光子なら速さ$v$は光速$c$ですね</note>
 
 ---
 
@@ -217,78 +239,133 @@ Davisson-Germerの実験ともよばれている.
 
 ---
 
+<div class="grid grid-cols-[50%,50%] gap-4"><div>
+
 # 原子の復習
 
 
----
-
-# de Broglie波
-粒子の波動性
-
-$$
-p = \frac{h}{\lambda}
-$$
-photonの運動量$p$はコンプトン効果からわかる. $h$はプランク定数, $\lambda$は波長.
-
-波長に反比例カナ
-
-
-de Broglie方程式
-$$
-\lambda = \frac{h}{p}=\frac{h}{mv}
-$$
-運動エネルギー$p$は$mv$と等価です(定義)
-
----
-
-# リュードベリ
-
 <div class="img2"></div>
-
-<br>
-
 
 <style>
   .img2{
-    background-image:url(img/spectral.png);
+    background-image:url(img/bohr-model.png);
     background-repeat:no-repeat;
-    background-size:400pt 150pt;
-    width:400pt;
-    height:150pt;
+    background-size:250px 250px;
+    width:auto;
+    height:250px;
   }
 </style>
+
+
+- **電子** -1の電荷を持っている, 原子の構成粒子
+- -- 原子核の近くから配備されている(K殻, L殻, ...)
+- -- 外側の電子ほどエネルギーが高い
+- -- 原子によってイオン化エネルギーが決まっている
+
+<note>化学セミナーに書いてあったYO</note>
+</div><div>
+
+# 今回わかること
+
+### なぜ電子は原子核の近くにいたがるのか
+
+電子の軌道半径とエネルギーの関係を求めます!
+
+水素原子を使います. 他の原子では示せないのですが, 現実をみてみるとどの電子も原子核の近くにいたがってますね.
+
+
+### 水素原子の第1イオン化エネルギー
+
+$1312.0$kJ/molですね. <- 導出するよ
+
+
+</div></div>
+
+---
+
+
+<div class="grid grid-cols-[50%,50%] gap-4"><div>
+
+# 水素原子のスペクトル
+
+![](img/spectrum-H.png)
+横軸波長の水素原子のスペクトル
+
+- -- 電子はK殻にいる
+- -- 高温にする(エネルギーをあたえる)
+- -- 外の軌道(L殻, M殻...)に移る
+- -- エネルギーの低い軌道に戻る
+- -- 光子を出す
+
+とびとびで光っているのは電子のいられる位置が決まっているから.
+
+</div><div>
+
+# 何がわかるのか
+- **スペクトルの予想** 嬉しいかは知らん
+- **電子の軌道半径** ほう
+- **エネルギーと軌道半径の関係** ほうほう
+- **電子の安定した状態** なるほどね?
+
+これからわかる
+
+- **Rydberg** - 実験データからスペクトルの予想の式を立てた
+- **Bohr** - 理論的に**Rydberg**の式を導出した
+
+
+</div></div>
+
+---
+
+
 
 <div class="box_sample02">
 
 <div class="grid grid-cols-[50%,50%] gap-4"><div>
 
 
-水素の線スペクトルの波長を定式化
+<div class="img2"></div>
+
+<style>
+  .img2{
+    background-image:url(img/bohr-model.png);
+    background-repeat:no-repeat;
+    background-size:250px 250px;
+    width:auto;
+    height:250px;
+  }
+</style>
+出てくる光子のエネルギーは軌道上のエネルギーの差だよ
 $$
-\tilde{\nu} = R(\frac{1}{n_1^2} - \frac{1}{n_2^2})
+E_{光子} = h \nu = \frac{hv}{\lambda} = \frac{hc}{\lambda}
 $$
 
 $$
-E = hc\tilde{\nu}
+E_{光子} = \Delta E = E_{n_2} - E_{n_1}
 $$
+
+エネルギーは保存されるので余ったエネルギーが光子に変わったのカナ
 
 </div><div>
 
-<div class="s1">
 
+# Rydbergの式
+$n_2$番目の軌道から$n_1$番目の軌道に移動するときの水素原子のスペクトル波長を定式化
+$$
+\tilde{\nu} = \frac{1}{\lambda} = R(\frac{1}{n_1^2} - \frac{1}{n_2^2})
+$$
 
-
-$R$:リュードベリ定数($1.097 \times 10^7 m^{-1}$)
+$R$: Rydberg定数($109677.6 cm^{-1}$)
 
 $n_1, n_2$:任意の自然数 <br>
 
-- E: エネルギー(J)
 - h: プランク定数(Js)
-- c: 光速(cm/s)
 - $\tilde{\nu}$: 波数($cm^{-1}$) 波長の逆数
 
+<note>振動数$\nu$と波数$\tilde{\nu}$は別人であることに注意!</note>
 
-</div>
+たしかに正しいけど, 導出されたわけじゃないから本当か??という疑問が残る
+
 </div></div>
 
 </div>
@@ -296,11 +373,15 @@ $n_1, n_2$:任意の自然数 <br>
 
 ---
 
-# Bohrの量子条件
 
 
 <div class="grid grid-cols-[50%,50%] gap-4"><div>
 
+# Bohrの量子条件
+
+[^1]: 角運動量が離散的な値を取るというのが本来の意味
+
+電子が動ける条件[^1]
 $$
 mvr = n\frac{h}{2\pi}
 $$
@@ -312,15 +393,16 @@ $$
 2\pi r = n \lambda
 $$
 
-$2\pi r$: 半径$r$の円の外周  
-$\lambda$: 波長
-
+$2\pi r$: 半径$r$の円の外周, $\lambda$: 電子を波動とみたときの波長
+<note>このときの波長は具体的な意味を持たない</note>
 
 
 #### 位相がずれない(定常波) -> 電子が安定する
 
 
 </div><div>
+
+$n$はK殻, L殻, ...を1, 2, ...に対応づけたものです.
 
 <div class="img2"></div>
 
@@ -339,9 +421,37 @@ $\lambda$: 波長
   }
 </style>
 
+
 </div></div>
+
 ---
 
+# Rydbergの式を導出します
+<div class="grid grid-cols-[50%,50%] gap-4"><div>
+
+
+### 原子内の力のつり合いを計算
+
+外向き: 電子の遠心力(回っているので)  
+内向き: Coulomb力
+
+### エネルギーを立式してみる
+
+**すべての**エネルギーなので, 運動エネルギーと位置エネルギーの和である力学的エネルギーを求める
+
+</div><div>
+
+### 電子の軌道半径を求める
+
+クーロン力 = 遠心力 という式から,
+力学的エネルギーは2通りの$r$に関する式で表現できる.
+それを$r=$という形になおす.
+
+### エネルギーを求める
+さっき求めた式には非自明な変数$r$が含まれていたので, 1つ上で求めた$r$を代入して完成.
+
+</div></div>
+---
 
 <div class="grid grid-cols-[50%,50%] gap-4"><div>
 
@@ -384,7 +494,13 @@ $$
 ディラック定数$\hbar=\frac{h}{2\pi}$
 
 $$
-E = -T = -\frac{1}{2}\frac{1}{\mu r^2} n^2 \hbar^2 = - \frac{1}{4\pi \epsilon_0} \frac{e^2}{2r}
+E = -T =
+-\frac{1}{2} \mu r^2 \omega^2
+= -\frac{1}{2}\frac{1}{\mu r^2} n^2 \hbar^2 
+$$
+
+$$
+E = -T = - \frac{1}{4\pi \epsilon_0} \frac{e^2}{2r}
 $$
 
 $$
@@ -399,30 +515,52 @@ $$
 ある自然数$n$に対応するエネルギー$E_n$がわかった!
 
 </div></div>
+
 ---
 
 # エネルギー準位からわかること
-電子配置の話カモ
 
 
 $$
 E_n = - \frac{1}{(4\pi \epsilon_0)^2} \frac{\mu e^4}{2n^2\hbar^2}
- = -\frac{1}{4\pi \epsilon_0}\frac{e^2}{2r}
+= - \frac{1}{K_0^2} \frac{\mu e^4}{2n^2\hbar^2}
+
+\quad \quad  
+r = \frac{4\pi \epsilon_0 \hbar^2}{\mu e^2} n^2
+
+= \frac{1}{K_0} \frac{\hbar^2}{\mu e^2} n^2
 $$
 
 <div class="grid grid-cols-[50%,50%] gap-4"><div>
 
-## $n=1$が最も安定
 
-安定: 最もエネルギーが小さい
+- $K_0$ - クーロン力のクーロン定数(N $m^2$ / $C^2$)
+- $\mu$ - 電子の質量(kg)[^1]
+- $\hbar$ - ディラック定数(Js)
+- $e$ - 電子の電荷( C )
+- $n$ - 電子の軌道の番号(近い順)
 
-- $n=1$が最も安定
-  - $n$が大きくなると$E_n$も大きく
-  - $r$が最小なので, 原子核に最も近い位置で安定
-- 無限遠に離れていると不安定
-  - $r \to \infty$で$E_n$が最大
+
+エネルギーが最も小さいときの状態を**基底状態**, それ以外の状態を**励起状態**といいます
+
+[^1]: 原子核との換算質量です
 
 </div><div>
+
+###  電子が原子核の近くにいる理由
+- $n=1$
+- -- エネルギー$E_n$が最も小さい
+- -- 軌道半径$r$が最も小さい 
+- $n=\infty$
+- -- エネルギー$E_n$が最も大きい
+- -- 軌道半径$r$が最も大きい
+
+
+
+</div></div>
+
+---
+
 
 ## Rydbergの式が導出できていた
 
@@ -437,9 +575,53 @@ $$
 $$
 \tilde{\nu} = \frac{\Delta E}{ch} = 
 
-\frac{\mu e^4}{8\epsilon_0^2h^3}
+\frac{\mu e^4}{8\epsilon_0^2 c h^3}
 (\frac{1}{n_1^2}- \frac{1}{n_2^2})
 $$
 
 
-</div></div>
+したがって, Rydberg定数も理論的に導くことができる.
+$$
+R = \frac{\mu e^4}{8\epsilon_0^2 ch^3}
+$$
+
+Rydberg定数から$\Delta E$を求める
+
+$$
+\Delta E = Rch(\frac{1}{n_1^2} - \frac{1}{n_2^2})
+$$
+
+---
+
+# 水素原子の第1イオン化エネルギーを求めてみる
+
+今までの集大成です. 有効数字はガン無視です
+$$
+\Delta E = Rch(\frac{1}{n_1^2} - \frac{1}{n_2^2})
+$$
+
+$R$: $1.09737 \times 10^7 m^{-1}$
+&emsp;    $c$: $2.9979 \times 10^8$m/s
+&emsp; $h$: $6.626 \times 10^{-34}$Js
+
+イオンになるということは, 1番目の軌道から∞番目の軌道に遷移したと考えられます.
+
+つまるところ, $n_2 = 1$, $n_1 = \infty$としてあげればよさそうです.
+
+$$
+\lim_{n_2 \to \infty} \frac{1}{1} - \frac{1}{n_2} = 1
+$$
+
+$$
+\Delta E = 1.09737  \times 10^7 \times 2.9979 \times 10^8 \times 6.626 \times 10^{-34} = 2.179825 \times 10^{-18} J
+$$
+1原子当たりの第1イオン化エネルギーがわかったので, kJ/molに直します.
+
+$$
+2.179825 \times 10^{-18} \times 6.022 \times 10^{23} \div 10^{-3} = 1.31269 \times 10^{4} kJ/mol
+$$
+
+---
+
+![](img/h-ion.jpeg)
+
