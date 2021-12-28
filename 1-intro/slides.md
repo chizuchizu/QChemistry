@@ -1,8 +1,7 @@
 ---
-# try also 'default' to start simple
-theme: geist 
-
-footer: "量子化学勉強会 1日目"
+theme: default
+footer: 量子化学勉強会 1日目
+title: '量子化学勉強会 #1'
 ---
 
 # 量子化学勉強会 #1
@@ -10,6 +9,7 @@ footer: "量子化学勉強会 1日目"
 木更津高専 化学同好会
 
 p.11 ~ p.47
+
 
 ---
 
@@ -408,7 +408,6 @@ $1312.0$kJ/molですね. <- 導出するよ
 ---
 
 
-<div class="box_sample02">
 
 <div class="grid grid-cols-[50%,50%] gap-4"><div>
 
@@ -456,7 +455,6 @@ $n_1, n_2$:任意の自然数 <br>
 
 </div></div>
 
-</div>
 
 
 ---
@@ -922,4 +920,3 @@ $$
 ---
 
 #  $\mathrm{Schr\"{o}dinger}$方程式♡
-
