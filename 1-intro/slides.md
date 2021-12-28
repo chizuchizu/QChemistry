@@ -119,7 +119,7 @@ $$
 
 <style>
   .img{
-    background-image: url(./img/work.png);
+    background-image: url(/img/work.png);
     background-repeat: no-repeat;
     background-size: 200pt 150pt;
     width: 250pt;
@@ -157,7 +157,7 @@ $$
 
 <style>
   .img1{
-    background-image: url(./img/121.png);
+    background-image: url(/img/121.png);
     background-repeat: no-repeat;
     background-size: 360pt 150px;
     width: 360pt;
@@ -199,7 +199,7 @@ $$
 
 <style>
   .img2{
-    background-image:url(./img/1.2.1.png);
+    background-image:url(/img/1.2.1.png);
     background-repeat:no-repeat;
     background-size:300pt 250px;
     width:300pt;
@@ -238,7 +238,7 @@ $$
 
 <style>
   .img2{
-    background-image:url(./img/koden-energy.png);
+    background-image:url(/img/koden-energy.png);
     background-repeat:no-repeat;
     background-size:150pt 180px;
     width:150pt;
@@ -298,7 +298,7 @@ $d$: 原子面間隔, $\lambda$: 波長, nは任意の自然数
 
 <style>
   .img2{
-    background-image:url(./img/bragg.png);
+    background-image:url(/img/bragg.png);
     background-repeat:no-repeat;
     background-size:200pt 200px;
     width:250pt;
@@ -328,7 +328,7 @@ Davisson-Germerの実験ともよばれている.
 
 <style>
   .img2{
-    background-image:url(img/bohr-model.png);
+    background-image:url(/img/bohr-model.png);
     background-repeat:no-repeat;
     background-size:250px 250px;
     width:auto;
@@ -372,7 +372,7 @@ $1312.0$kJ/molですね. <- 導出するよ
 
 <style>
   .img2{
-    background-image:url(./img/spectrum-H.png);
+    background-image:url(/img/spectrum-H.png);
     background-repeat:no-repeat;
     background-size:300pt 70px;
     width:650pt;
@@ -416,7 +416,7 @@ $1312.0$kJ/molですね. <- 導出するよ
 
 <style>
   .img2{
-    background-image:url(img/bohr-model.png);
+    background-image:url(/img/bohr-model.png);
     background-repeat:no-repeat;
     background-size:250px 250px;
     width:auto;
@@ -582,7 +582,7 @@ $n$はK殻, L殻, ...を1, 2, ...に対応づけたものです.
 
 <style>
   .img2{
-    background-image:url(img/bohr.jpeg);
+    background-image:url(/img/bohr.jpeg);
     background-repeat:no-repeat;
     background-size:auto auto;
     width:180pt;
@@ -697,7 +697,7 @@ $$
 
 <style>
   .img2{
-    background-image:url(img/energy-juni.jpg);
+    background-image:url(/img/energy-juni.jpg);
     background-repeat:no-repeat;
     background-size:320pt 400pt;
     width:380pt;
@@ -909,7 +909,7 @@ $$
 
 <style>
   .img{
-    background-image:url(./img/h-ion.jpeg);
+    background-image:url(/img/h-ion.jpeg);
     background-repeat:no-repeat;
     background-size:650pt 400pt;
     width:950pt;
