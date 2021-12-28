@@ -368,7 +368,17 @@ $1312.0$kJ/molですね. <- 導出するよ
 
 # 水素原子のスペクトル
 
-![](img/spectrum-H.png)
+<div class="img2"></div>
+
+<style>
+  .img2{
+    background-image:url(./img/spectrum-H.png);
+    background-repeat:no-repeat;
+    background-size:300pt 70px;
+    width:650pt;
+    height:70px
+  }
+</style>
 横軸波長の水素原子のスペクトル
 
 - -- 電子はK殻にいる
@@ -896,7 +906,18 @@ $$
 
 ---
 
-![](img/h-ion.jpeg)
+
+<div class="img"></div>
+
+<style>
+  .img{
+    background-image:url(./img/h-ion.jpeg);
+    background-repeat:no-repeat;
+    background-size:650pt 400pt;
+    width:950pt;
+    height:880pt
+  }
+</style>
 
 ---
 
