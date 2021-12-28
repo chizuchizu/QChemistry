@@ -75,7 +75,7 @@ p.11 ~ p.47
 
 <style>
   .img2{
-    background-image:url(./img/wave-detail.png);
+    background-image:url(/img/wave-detail.png);
     background-repeat:no-repeat;
     background-size:340pt 230px;
     width:360pt;
