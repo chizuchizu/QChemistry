@@ -1,30 +1,54 @@
 ---
 # try also 'default' to start simple
 theme: geist 
-# random image from a curated Unsplash collection by Anthony
-# like them? see https://unsplash.com/collections/94734566/slidev
-background: https://source.unsplash.com/collection/94734566/1920x1080
-# apply any windi css classes to the current slide
-class: 'text-center'
-# https://sli.dev/custom/highlighters.html
-highlighter: shiki
-# show line numbers in code blocks
-lineNumbers: false
-# some information about the slides, markdown enabled
-info: |
-  ## Slidev Starter Template
-  Presentation slides for developers.
-
-  Learn more at [Sli.dev](https://sli.dev)
-# persist drawings in exports and build
-drawings:
-  persist: false
 
 footer: "量子化学勉強会 1日目"
 ---
 
+# 量子化学勉強会 #1
 
-# Hi There
+木更津高専 化学同好会
+
+p.11 ~ p.47
+
+---
+
+# 使用教材
+
+[学部学生のための量子化学講義ノート　前編
+](https://www.jstage.jst.go.jp/article/molsci/5/1/5_1_AC0005/_pdf/-char/ja)
+
+
+## めっちゃ物理です
+
+
+---
+
+## 特徴
+- **難しい** - 前提知識を必要とする
+- **英語表現** - 人名は英語になりがち  例: Coulomb力
+- **演習問題が充実** - 結構面白いけど難しい 答えは載ってない
+- **具体例が多い** - コラムがしっかりしている
+
+---
+
+# おねがい
+
+### 私も初心者です
+
+間違ってることがあります. 「これってこういうこと？」でも何でも聞いてください.
+
+### 全部は話せない
+
+要点や数式を丁寧に追ったりするくらいしかできません. 
+
+
+# 今日の献立
+
+- **波とは**
+- **光電効果** - 波は粒子である
+- **de Broglie波** - 粒子は波である
+- **原子の性質をみる** - 電子の話
 
 ---
 
@@ -61,6 +85,62 @@ footer: "量子化学勉強会 1日目"
 </div></div>
 
 
+---
+
+<div class="grid grid-cols-[50%,50%] gap-4"><div>
+
+# 仕事わかる?
+
+- **保存力** - 仕事が途中の経路によらず, 両端の位置だけの関数として下のように表されるときの力
+- **ポテンシャル** - 保存力が定義できるときの$U$
+
+$$
+W_{A-B} = U(A) - U(B)
+$$
+
+力$F(y)$による$y$から$y+dy$までの仕事は$W=F(y)dy$  
+これを$A$から$B$まで無限に足せばよさそう.
+
+$$
+W_{A-B} = \int_A^B F dy
+$$
+
+基準点を決めてあげれば差を使って求めることも可能.
+
+$$
+W_{A-B} = U(A) - U(B) = \int_0^A F dy - \int_0^B F dy
+$$
+
+
+
+</div><div>
+
+<div class="img"></div>
+
+<style>
+  .img{
+    background-image: url(./img/work.png);
+    background-repeat: no-repeat;
+    background-size: 200pt 150pt;
+    width: 250pt;
+    height: 150pt
+  }
+</style>
+
+## Coulombポテンシャルを求める
+クーロン力の定義
+$$
+F = \frac{1}{4\pi \epsilon_0} \frac{q_1 q_2}{r^2}
+$$
+
+原子核を基準点にすると発散するので無限遠点を基準点にします.
+
+$$
+U(r) = \int_{r}^{\infty} F dr = \frac{1}{4\pi \epsilon_0}\frac{q_1 q_2}{r}
+$$
+
+
+</div></div>
 ---
 
 # 光電効果(photoeletric effect)
@@ -318,7 +398,6 @@ $1312.0$kJ/molですね. <- 導出するよ
 ---
 
 
-
 <div class="box_sample02">
 
 <div class="grid grid-cols-[50%,50%] gap-4"><div>
@@ -348,7 +427,6 @@ $$
 
 </div><div>
 
-
 # Rydbergの式
 $n_2$番目の軌道から$n_1$番目の軌道に移動するときの水素原子のスペクトル波長を定式化
 $$
@@ -373,6 +451,89 @@ $n_1, n_2$:任意の自然数 <br>
 
 ---
 
+# これからやること
+<div class="grid grid-cols-[50%,50%] gap-4"><div>
+
+
+### 原子内の力のつり合いを計算
+
+外向き: 電子の遠心力(回っているので)  
+内向き: Coulomb力
+
+### エネルギーを立式してみる
+
+**すべての**エネルギーなので, 運動エネルギーとポテンシャルエネルギーの和である力学的エネルギーを求める
+
+</div><div>
+
+### 電子の軌道半径を求める
+
+Coulomb力 = 遠心力 という式から,
+力学的エネルギーは2通りの$r$に関する式で表現できる.
+それを$r=$という形になおす.
+
+### エネルギーを求める
+さっき求めた式には非自明な変数$r$が含まれていたので, 1つ上で求めた$r$を代入して完成.
+
+</div></div>
+
+---
+
+## $r$が小さいほど安定する理由
+<div class="grid grid-cols-[50%,50%] gap-4"><div>
+
+電子と原子核の間に働くCoulomb力と, 円軌道を描く電子の遠心力のつり合いの式
+$$
+\frac{\mu v^2}{r}  = \frac{1}{4\pi \epsilon_0} \frac{e^2}{r^2}
+$$
+
+この式の書き換え
+$$
+r = \frac{e^2}{4\pi \epsilon_0 \mu v^2}
+$$
+
+電子の軌道半径$r$は速度$v$に依存していますね.
+
+そして, 電子の力学的エネルギーも求められる.(運動エネルギーとポテンシャルエネルギーの和)
+
+$$
+E = \frac{1}{2} \mu v^2 - \frac{e^2}{4\pi \epsilon_0 r}
+$$
+
+</div><div>
+
+力学的エネルギーの式から$v$を消去してみます.
+
+$$
+
+E = \frac{1}{2} \mu v^2 - \frac{e^2}{4\pi \epsilon_0 r}
+= \frac{e^2}{8\pi \epsilon_0 r} - \frac{e^2}{4\pi \epsilon_0 r}
+= -\frac{e^2}{8\pi \epsilon_0 r}
+$$
+
+<note>エネルギーが**負の値**を取ることに注意</note>
+
+$r$が小さいほどエネルギーが小さくなるので, 電子はより原子核の近くにいたがることがわかります!
+
+電子も楽して生きたいそうです
+
+</div></div>
+
+---
+
+# Bohrの量子条件
+
+Q. じゃあ電子は原子核に最も近い位置$r \to 0$にいるってこと?
+A. いいえ
+
+水素原子の線スペクトルがとびとびの値を持っていることを説明することができません.
+
+$$
+E_n = - \frac{\mu e^4}{8\pi \epsilon_0^2 h^2} \frac{1}{n^2}
+$$
+
+
+---
 
 
 <div class="grid grid-cols-[50%,50%] gap-4"><div>
@@ -426,31 +587,185 @@ $n$はK殻, L殻, ...を1, 2, ...に対応づけたものです.
 
 ---
 
-# Rydbergの式を導出します
 <div class="grid grid-cols-[50%,50%] gap-4"><div>
 
 
-### 原子内の力のつり合いを計算
+# 軌道半径が決まる
 
-外向き: 電子の遠心力(回っているので)  
-内向き: Coulomb力
+Bohrの量子条件より
+$$
+\frac{1}{v} = \frac{2\pi \mu r }{nh}
+$$
+これを軌道半径$r$の式に代入します.
+$$
+r = \frac{e^2}{4\pi \epsilon_0 \mu v^2}
+= \frac{e^2}{4\pi \epsilon_0 \mu } (\frac{2\pi \mu r}{nh})^2 = \frac{\pi \mu r^2}{n^2 h^2 \epsilon_0}
+$$
+$r$を消去して
+$$
+r_n  
+=  \frac{n^2h^2\epsilon_0}{\pi \mu e^2}
+$$
 
-### エネルギーを立式してみる
-
-**すべての**エネルギーなので, 運動エネルギーと位置エネルギーの和である力学的エネルギーを求める
+添字に$n$をつけて量子数$n$に依存しているという意味を表しています.
 
 </div><div>
 
-### 電子の軌道半径を求める
+# エネルギーが決まる
 
-クーロン力 = 遠心力 という式から,
-力学的エネルギーは2通りの$r$に関する式で表現できる.
-それを$r=$という形になおす.
+$r_n$をエネルギーの式に代入します.
 
-### エネルギーを求める
-さっき求めた式には非自明な変数$r$が含まれていたので, 1つ上で求めた$r$を代入して完成.
+$$
+E_n
+= -\frac{e^2}{8\pi \epsilon_0 r_n}
+= -\frac{e^2}{8\pi \epsilon_0 r_n} \frac{\pi \mu e^2}{n^2 h^2 \epsilon_0}
+= -\frac{\mu e^4}{8 \epsilon_0^2 h^2} \frac{1}{n^2}
+$$
 
 </div></div>
+
+---
+
+# エネルギーからわかること
+
+
+$$
+E_n 
+= -\frac{\mu e^4}{8 \epsilon_0^2 h^2} \frac{1}{n^2}
+
+\quad \quad  
+r_n  
+=  \frac{n^2h^2\epsilon_0}{\pi \mu e^2}
+$$
+
+<div class="grid grid-cols-[50%,50%] gap-4"><div>
+
+
+- $\mu$ - 電子の質量(kg)[^1]
+- $e$ - 電子の電荷( C )
+- $n$ - 量子数
+- $h$ - プランク定数
+- $\epsilon_0$ - 誘電率
+
+
+エネルギーが最も小さいときの状態を**基底状態**, それ以外の状態を**励起状態**といいます
+
+[^1]: 原子核との換算質量です
+
+</div><div>
+
+###  電子が原子核の近くにいる理由
+- $n=1$
+- -- エネルギー$E_n$が最も小さい
+- -- 軌道半径$r$が最も小さい
+- $n=\infty$
+- -- エネルギー$E_n$が最も大きい
+- -- 軌道半径$r$が最も大きい
+
+</div></div>
+
+---
+
+<div class="grid grid-cols-[50%,50%] gap-4"><div>
+
+# Bohr半径
+
+**基底状態**のときの電子の軌道半径を**ボーア半径**($a_0$と表す)とよびます.
+
+$$
+a_0 = \frac{h^2 \epsilon_0}{\pi \mu e^2} = 0.053 \text{nm}
+$$
+
+| 量子数$n$ | 軌道半径$r_n$ | エネルギー$E_n$                          | 
+| --------- | ------------- | ---------------------------------------- | 
+| 1         | $a_0$         | $-\frac{me^4}{8\epsilon_0h-2}$             | 
+| 2         | 4$a_0$        | $-\frac{1}{4} \frac{me^4}{8\epsilon_0h-2}$ | 
+| $\vdots$  | $\vdots$      | $\vdots$                                 | 
+| $\infty$  | $\infty$      | 0                                        | 
+
+</div><div>
+
+<div class="img2"></div>
+
+<style>
+  .img2{
+    background-image:url(img/energy-juni.jpg);
+    background-repeat:no-repeat;
+    background-size:320pt 400pt;
+    width:380pt;
+    height:600pt;
+  }
+</style>
+</div></div>
+
+---
+
+
+<div class="grid grid-cols-[50%,50%] gap-4"><div>
+
+# Bohrの振動数条件
+
+量子数$n_1$から量子数$n_2$に遷移するとき  
+放出される光子のエネルギー$\Delta E$は  
+エネルギーの差
+$
+\Delta E = E_{n_1} - E_{n_2}
+$
+で与えられます.
+
+<note>エネルギーは保存されるよ!</note>
+
+
+光子のエネルギー$\Delta E$は振動数に比例します.(光電効果から)
+$$
+\Delta E = h \nu
+$$
+
+先程求めたエネルギー$E_n$を用いて方程式を立てると, 水素原子の線スペクトル(波長)が求められます.
+
+</div><div>
+
+# 波長を求める
+
+$$
+\Delta E = E_{n_1} - E_{n_2}
+= 
+- \frac{\mu e^4}{8\pi \epsilon_0^2 h^2} \frac{1}{n_1^2}
++ \frac{\mu e^4}{8\pi \epsilon_0^2 h^2} \frac{1}{n_2^2}
+\\
+= \frac{\mu e^4}{8\pi \epsilon_0^2 h^2} (\frac{1}{n_2^2} - \frac{1}{n_1^2})
+
+$$
+
+水素原子の線スペクトルの振動数$\nu$もわかりますね.
+$$
+\nu = \frac{\Delta E}{h}  
+= \frac{\mu e^4}{8\pi \epsilon_0^2 h^3} (\frac{1}{n_2^2} - \frac{1}{n_1^2})
+$$
+
+<note>前ページの画像を参照</note>
+
+</div></div>
+
+
+---
+
+# Rydbergの式を導出(9割終わってるけど)
+
+$
+\nu \lambda = c
+$なので
+
+$$
+\tilde{\nu} = 
+\frac{1}{\lambda} = \frac{\nu}{c} = \frac{1}{c} \frac{\Delta E}{h} = \frac{\mu e^4}{8 \epsilon_0^2 h^2}(\frac{1}{n_2^2} - \frac{1}{n_1^2})
+$$
+
+したがって, Rydberg定数も理論的に導くことができますね.
+$$
+R = \frac{\mu e^4}{8\epsilon_0^2 ch^3}
+$$
+
 ---
 
 <div class="grid grid-cols-[50%,50%] gap-4"><div>
@@ -473,7 +788,7 @@ $$
 T = \frac{1}{2}mv^2= \frac{1}{2} \mu r^2 \omega^2 = \frac{1}{4\pi \epsilon_0}\frac{e^2}{2r} 
 $$
 $$
-V = \int \frac{1}{4 \pi \epsilon_0}\frac{e^2}{r^2} dr
+V = \int_{r}^{\infty} \frac{1}{4 \pi \epsilon_0}\frac{e^2}{r^2} dr
  = -\frac{1}{4\pi \epsilon_0} \frac{e^2}{r}
 $$
 
@@ -518,49 +833,6 @@ $$
 
 ---
 
-# エネルギー準位からわかること
-
-
-$$
-E_n = - \frac{1}{(4\pi \epsilon_0)^2} \frac{\mu e^4}{2n^2\hbar^2}
-= - \frac{1}{K_0^2} \frac{\mu e^4}{2n^2\hbar^2}
-
-\quad \quad  
-r = \frac{4\pi \epsilon_0 \hbar^2}{\mu e^2} n^2
-
-= \frac{1}{K_0} \frac{\hbar^2}{\mu e^2} n^2
-$$
-
-<div class="grid grid-cols-[50%,50%] gap-4"><div>
-
-
-- $K_0$ - クーロン力のクーロン定数(N $m^2$ / $C^2$)
-- $\mu$ - 電子の質量(kg)[^1]
-- $\hbar$ - ディラック定数(Js)
-- $e$ - 電子の電荷( C )
-- $n$ - 電子の軌道の番号(近い順)
-
-
-エネルギーが最も小さいときの状態を**基底状態**, それ以外の状態を**励起状態**といいます
-
-[^1]: 原子核との換算質量です
-
-</div><div>
-
-###  電子が原子核の近くにいる理由
-- $n=1$
-- -- エネルギー$E_n$が最も小さい
-- -- 軌道半径$r$が最も小さい 
-- $n=\infty$
-- -- エネルギー$E_n$が最も大きい
-- -- 軌道半径$r$が最も大きい
-
-
-
-</div></div>
-
----
-
 
 ## Rydbergの式が導出できていた
 
@@ -596,6 +868,7 @@ $$
 # 水素原子の第1イオン化エネルギーを求めてみる
 
 今までの集大成です. 有効数字はガン無視です
+
 $$
 \Delta E = Rch(\frac{1}{n_1^2} - \frac{1}{n_2^2})
 $$
@@ -624,4 +897,8 @@ $$
 ---
 
 ![](img/h-ion.jpeg)
+
+---
+
+#  $\mathrm{Schr\"{o}dinger}$方程式♡
 
