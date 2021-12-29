@@ -439,7 +439,7 @@ $$
 # Rydbergの式
 $n_2$番目の軌道から$n_1$番目の軌道に移動するときの水素原子のスペクトル波長を定式化
 $$
-\tilde{\nu} = \frac{1}{\lambda} = R(\frac{1}{n_1^2} - \frac{1}{n_2^2})
+\tilde{\nu} = \frac{1}{\lambda} = R\left(\frac{1}{n_1^2} - \frac{1}{n_2^2}\right)
 $$
 
 $R$: Rydberg定数($109677.6 cm^{-1}$)
@@ -607,7 +607,7 @@ $$
 これを軌道半径$r$の式に代入します.
 $$
 r = \frac{e^2}{4\pi \epsilon_0 \mu v^2}
-= \frac{e^2}{4\pi \epsilon_0 \mu } (\frac{2\pi \mu r}{nh})^2 = \frac{\pi \mu r^2}{n^2 h^2 \epsilon_0}
+= \frac{e^2}{4\pi \epsilon_0 \mu } \left(\frac{2\pi \mu r}{nh}\right)^2 = \frac{\pi \mu r^2}{n^2 h^2 \epsilon_0}
 $$
 $r$を消去して
 $$
@@ -741,14 +741,14 @@ $$
 - \frac{\mu e^4}{8\pi \epsilon_0^2 h^2} \frac{1}{n_1^2}
 + \frac{\mu e^4}{8\pi \epsilon_0^2 h^2} \frac{1}{n_2^2}
 \\
-= \frac{\mu e^4}{8\pi \epsilon_0^2 h^2} (\frac{1}{n_2^2} - \frac{1}{n_1^2})
+= \frac{\mu e^4}{8\pi \epsilon_0^2 h^2} \left(\frac{1}{n_2^2} - \frac{1}{n_1^2}\right)
 
 $$
 
 水素原子の線スペクトルの振動数$\nu$もわかりますね.
 $$
 \nu = \frac{\Delta E}{h}  
-= \frac{\mu e^4}{8\pi \epsilon_0^2 h^3} (\frac{1}{n_2^2} - \frac{1}{n_1^2})
+= \frac{\mu e^4}{8\pi \epsilon_0^2 h^3}\left(\frac{1}{n_2^2} - \frac{1}{n_1^2}\right)
 $$
 
 <note>前ページの画像を参照</note>
@@ -766,7 +766,7 @@ $なので
 
 $$
 \tilde{\nu} = 
-\frac{1}{\lambda} = \frac{\nu}{c} = \frac{1}{c} \frac{\Delta E}{h} = \frac{\mu e^4}{8 \epsilon_0^2 h^2}(\frac{1}{n_2^2} - \frac{1}{n_1^2})
+\frac{1}{\lambda} = \frac{\nu}{c} = \frac{1}{c} \frac{\Delta E}{h} = \frac{\mu e^4}{8 \epsilon_0^2 h^2}\left(\frac{1}{n_2^2} - \frac{1}{n_1^2}\right)
 $$
 
 したがって, Rydberg定数も理論的に導くことができますね.
@@ -848,7 +848,7 @@ $$
 \Delta E = E_{n_2} - E_{n_1} = 
 
 \frac{1}{(4\pi \epsilon_0)^2} \frac{\mu e^4}{2\hbar^2}
-(\frac{1}{n_1^2}- \frac{1}{n_2^2})
+\left(\frac{1}{n_1^2}- \frac{1}{n_2^2}\right)
 $$
 
 波数とエネルギーの関係から
@@ -856,7 +856,7 @@ $$
 \tilde{\nu} = \frac{\Delta E}{ch} = 
 
 \frac{\mu e^4}{8\epsilon_0^2 c h^3}
-(\frac{1}{n_1^2}- \frac{1}{n_2^2})
+\left(\frac{1}{n_1^2}- \frac{1}{n_2^2}\right)
 $$
 
 
@@ -868,7 +868,7 @@ $$
 Rydberg定数から$\Delta E$を求める
 
 $$
-\Delta E = Rch(\frac{1}{n_1^2} - \frac{1}{n_2^2})
+\Delta E = Rch\left(\frac{1}{n_1^2} - \frac{1}{n_2^2}\right)
 $$
 
 ---
@@ -878,7 +878,7 @@ $$
 今までの集大成です. 有効数字はガン無視です
 
 $$
-\Delta E = Rch(\frac{1}{n_1^2} - \frac{1}{n_2^2})
+\Delta E = Rch\left( \frac{1}{n_1^2} - \frac{1}{n_2^2}\right)
 $$
 
 $R$: $1.09737 \times 10^7 m^{-1}$
