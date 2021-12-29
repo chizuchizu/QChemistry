@@ -1,6 +1,7 @@
 ---
-theme: geist
+theme: vuetiful
 footer: 量子化学勉強会 1日目
+titleRow: true
 title: '量子化学勉強会 #1'
 ---
 
