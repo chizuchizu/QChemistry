@@ -1,5 +1,5 @@
 ---
-theme: default
+theme: geist
 footer: 量子化学勉強会 1日目
 title: '量子化学勉強会 #1'
 ---
@@ -442,7 +442,7 @@ $$
 \tilde{\nu} = \frac{1}{\lambda} = R\left(\frac{1}{n_1^2} - \frac{1}{n_2^2}\right)
 $$
 
-$R$: Rydberg定数($109677.6 cm^{-1}$)
+$R$: Rydberg定数($109677.6 \mathrm{cm^{-1}}$)
 
 $n_1, n_2$:任意の自然数 <br>
 
@@ -649,8 +649,8 @@ $$
 <div class="grid grid-cols-[50%,50%] gap-4"><div>
 
 
-- $\mu$ - 電子の質量(kg)[^1]
-- $e$ - 電子の電荷( C )
+- $\mu$ - 電子の質量($\mathrm{kg}$)[^1]
+- $e$ - 電子の電荷( $\mathrm{C}$)
 - $n$ - 量子数
 - $h$ - プランク定数
 - $\epsilon_0$ - 誘電率
@@ -784,13 +784,13 @@ $$
 $$
 
 
-換算質量(電子の質量$m_3$と核の質量$M$)
+換算質量(電子の質量$m_e$と核の質量$M$)
 $$
 \frac{1}{\mu} = \frac{1}{m_e} + \frac{1}{M}
 $$
 
 $r$: 電子の回転半径, $\omega$: 角速度
-速さ$v$: $r^2 \omega^2$
+速さ$v$: $r^2 \omega$
 
 $$
 T = \frac{1}{2}mv^2= \frac{1}{2} \mu r^2 \omega^2 = \frac{1}{4\pi \epsilon_0}\frac{e^2}{2r} 
