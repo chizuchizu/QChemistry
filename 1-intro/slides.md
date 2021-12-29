@@ -32,6 +32,16 @@ p.11 ~ p.47
 - **具体例が多い** - コラムがしっかりしている
 
 ---
+layout: section
+---
+
+# 前提知識の解説
+
+- 向心力
+- 波について
+- 仕事について
+
+---
 
 # おねがい
 
@@ -50,6 +60,58 @@ p.11 ~ p.47
 - **光電効果** - 波は粒子である
 - **de Broglie波** - 粒子は波である
 - **原子の性質をみる** - 電子の話
+
+---
+
+<div class="grid grid-cols-[50%,50%] gap-4"><div>
+
+# 等速円運動
+等速円運動とは半径$r$の円周を等速度で動く運動です.
+動く物体の軌道はこのようになります.
+$$
+x = R \cos \omega t, \quad y = R\sin \omega t
+$$
+
+**角速度** - $\omega [\mathrm{rad / s}]$ 1秒間に回転する角を表します.
+
+$弧 = 半径 \times 角度$だったので, $v = r\omega$ですね.
+
+軌道を$t$で微分することによって, 速度と加速度を求めることができます.
+
+$$
+v_x = R\omega \sin \omega t, \quad y = - R\omega \cos \omega t
+$$
+
+$$
+a_x = - R \omega^2 \cos \omega t, \quad 
+a_y = - R \omega^2 \sin \omega t 
+$$
+これより, $v=R\omega$, $a=R\omega^2$であることがわかります.  
+等速円運動なので, 速さは一定ですが, **常に中心方向の加速度**が働いています.
+
+
+</div><div>
+
+<div class="img"></div>
+
+<style>
+  .img{
+    background-image:url(/img/circle.png);
+    background-repeat:no-repeat;
+    background-size:200pt 350px;
+    width:300pt;
+    height:350px
+  }
+</style>
+
+$$
+a_n = a =  R \omega^2 = R \frac{v^2}{R^2} = \frac{v^2}{R}
+$$
+
+中心方向に働く力は$F=ma$より$\frac{mv^2}{r}$です.  
+この力を**向心力**と呼びます.
+
+</div></div>
 
 ---
 
@@ -777,6 +839,63 @@ $$
 
 ---
 
+
+# 水素原子の第1イオン化エネルギーを求めてみる
+
+今までの集大成です. 有効数字はガン無視です
+
+$$
+\Delta E = Rch\left( \frac{1}{n_1^2} - \frac{1}{n_2^2}\right)
+$$
+
+$R$: $1.09737 \times 10^7 m^{-1}$
+&emsp;    $c$: $2.9979 \times 10^8$m/s
+&emsp; $h$: $6.626 \times 10^{-34}$Js
+
+イオンになるということは, 1番目の軌道から∞番目の軌道に遷移したと考えられます.
+
+つまるところ, $n_2 = 1$, $n_1 = \infty$としてあげればよさそうです.
+
+$$
+\lim_{n_2 \to \infty} \frac{1}{1} - \frac{1}{n_2} = 1
+$$
+
+$$
+\Delta E = 1.09737  \times 10^7 \times 2.9979 \times 10^8 \times 6.626 \times 10^{-34} = 2.179825 \times 10^{-18} J
+$$
+1原子当たりの第1イオン化エネルギーがわかったので, kJ/molに直します.
+
+$$
+2.179825 \times 10^{-18} \times 6.022 \times 10^{23} \div 10^{-3} = 1.31269 \times 10^{4} kJ/mol
+$$
+
+---
+
+
+<div class="img"></div>
+
+<style>
+  .img{
+    background-image:url(/img/h-ion.jpeg);
+    background-repeat:no-repeat;
+    background-size:650pt 400pt;
+    width:950pt;
+    height:880pt
+  }
+</style>
+
+---
+layout: section
+---
+# Appendix
+
+---
+
+
+#  $\mathrm{Schr\"{o}dinger}$方程式♡
+
+---
+
 <div class="grid grid-cols-[50%,50%] gap-4"><div>
 
 遠心力とクーロン力は等しいのです
@@ -873,51 +992,3 @@ $$
 $$
 
 ---
-
-# 水素原子の第1イオン化エネルギーを求めてみる
-
-今までの集大成です. 有効数字はガン無視です
-
-$$
-\Delta E = Rch\left( \frac{1}{n_1^2} - \frac{1}{n_2^2}\right)
-$$
-
-$R$: $1.09737 \times 10^7 m^{-1}$
-&emsp;    $c$: $2.9979 \times 10^8$m/s
-&emsp; $h$: $6.626 \times 10^{-34}$Js
-
-イオンになるということは, 1番目の軌道から∞番目の軌道に遷移したと考えられます.
-
-つまるところ, $n_2 = 1$, $n_1 = \infty$としてあげればよさそうです.
-
-$$
-\lim_{n_2 \to \infty} \frac{1}{1} - \frac{1}{n_2} = 1
-$$
-
-$$
-\Delta E = 1.09737  \times 10^7 \times 2.9979 \times 10^8 \times 6.626 \times 10^{-34} = 2.179825 \times 10^{-18} J
-$$
-1原子当たりの第1イオン化エネルギーがわかったので, kJ/molに直します.
-
-$$
-2.179825 \times 10^{-18} \times 6.022 \times 10^{23} \div 10^{-3} = 1.31269 \times 10^{4} kJ/mol
-$$
-
----
-
-
-<div class="img"></div>
-
-<style>
-  .img{
-    background-image:url(/img/h-ion.jpeg);
-    background-repeat:no-repeat;
-    background-size:650pt 400pt;
-    width:950pt;
-    height:880pt
-  }
-</style>
-
----
-
-#  $\mathrm{Schr\"{o}dinger}$方程式♡
