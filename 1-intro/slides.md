@@ -32,8 +32,6 @@ p.11 ~ p.47
 - **具体例が多い** - コラムがしっかりしている
 
 ---
-layout: section
----
 
 # 前提知識の解説
 
@@ -884,8 +882,6 @@ $$
   }
 </style>
 
----
-layout: section
 ---
 # Appendix
 
