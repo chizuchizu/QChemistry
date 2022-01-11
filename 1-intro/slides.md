@@ -64,7 +64,7 @@ p.11 ~ p.47
 <div class="grid grid-cols-[50%,50%] gap-4"><div>
 
 # 等速円運動
-等速円運動とは半径$r$の円周を等速度で動く運動です.
+等速円運動とは半径$R$の円周を等速度で動く運動です.
 動く物体の軌道はこのようになります.
 $$
 x = R \cos \omega t, \quad y = R\sin \omega t
@@ -72,12 +72,12 @@ $$
 
 **角速度** - $\omega [\mathrm{rad / s}]$ 1秒間に回転する角を表します.
 
-$弧 = 半径 \times 角度$だったので, $v = r\omega$ですね.
+$弧 = 半径 \times 角度$だったので, $v = R\omega$ですね.
 
 軌道を$t$で微分することによって, 速度と加速度を求めることができます.
 
 $$
-v_x = R\omega \sin \omega t, \quad y = - R\omega \cos \omega t
+v_x = R\omega \sin \omega t, \quad v_y = - R\omega \cos \omega t
 $$
 
 $$
@@ -883,12 +883,15 @@ $$
 </style>
 
 ---
+
 # Appendix
 
 ---
 
 
 #  $\mathrm{Schr\"{o}dinger}$方程式♡
+
+次回
 
 ---
 
